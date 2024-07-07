@@ -6,7 +6,7 @@ Certainly! Here's a sample `README.md` file that outlines the steps and requirem
 
 # NFT Collection README
 
-This repository contains scripts and contracts for managing an NFT collection generated using DALLE 2 or Midjourney, stored on IPFS via pinata.cloud, deployed on the Goerli Ethereum Testnet, and mapped to the Polygon network for enhanced functionality. Below are the steps to interact with and deploy the collection.
+This repository contains scripts and contracts for managing an NFT collection generated using DALLE 2 or Midjourney, stored on IPFS via pinata.cloud, deployed on the sepolia Ethereum Testnet, and mapped to the Polygon network for enhanced functionality. Below are the steps to interact with and deploy the collection.
 
 ## Steps to Deploy and Manage the NFT Collection
 
@@ -16,7 +16,7 @@ Using either DALLE 2 or Midjourney, generate a collection of 5 unique items. Ens
 
 ### 2. Deploy ERC721 Contract
 
-Deploy an ERC721 contract on the Goerli Ethereum Testnet. This contract will manage ownership and metadata of the NFTs.
+Deploy an ERC721 contract on the sepolia Ethereum Testnet. This contract will manage ownership and metadata of the NFTs.
 
 ### 3. Implement Metadata
 
@@ -32,12 +32,12 @@ Write Hardhat scripts for batch minting and transferring NFTs:
 
 - **Batch Minting**: Create a script to batch mint all 5 NFTs. Utilize ERC721A for optimal performance.
   
-- **Batch Transfer to Polygon**: Develop a script to batch transfer all NFTs from Ethereum to Polygon Mumbai using the FxPortal Bridge. Ensure NFTs are approved for transfer before initiating the deposit.
+- **Batch Transfer to Polygon**: Develop a script to batch transfer all NFTs from Ethereum to Polygon amoy using the FxPortal Bridge. Ensure NFTs are approved for transfer before initiating the deposit.
 
 ### 6. Testing
 
-Test the functionality of the ERC721 contract on Mumbai Polygon:
-- Verify balances using the `balanceOf` function on the Mumbai network to ensure NFTs were successfully deposited.
+Test the functionality of the ERC721 contract on amoy Polygon:
+- Verify balances using the `balanceOf` function on the amoy network to ensure NFTs were successfully deposited.
 
 ## Repository Structure
 
@@ -51,8 +51,8 @@ Test the functionality of the ERC721 contract on Mumbai Polygon:
 1. Clone this repository.
 2. Install dependencies using `npm install`.
 3. Configure your Ethereum and Polygon RPC endpoints in the Hardhat configuration file (`hardhat.config.js`).
-4. Deploy the ERC721 contract to the Goerli Testnet using `npx hardhat run scripts/deploy.js --network goerli`.
-5. Execute the minting and transfer scripts using Hardhat: `npx hardhat run scripts/mint.js --network goerli` and `npx hardhat run scripts/transfer-to-polygon.js --network goerli`.
+4. Deploy the ERC721 contract to the sepolia Testnet using `npx hardhat run scripts/deploy.js --network sepolia`.
+5. Execute the minting and transfer scripts using Hardhat: `npx hardhat run scripts/mint.js --network sepolia` and `npx hardhat run scripts/transfer-to-polygon.js --network sepolia`.
 
 ## Dependencies
 
